@@ -4,7 +4,7 @@ public class YoungestAndEldest {
     public YoungestAndEldest(String type, String name, String birthaday) {
         this.type = type;
         this.name = name;
-        this.birthaday = birthaday;
+        this.birthday = birthaday;
     }
 
     public String getType() {
@@ -16,19 +16,19 @@ public class YoungestAndEldest {
     }
 
     public String getBirthaday() {
-        return birthaday;
+        return birthday;
     }
 
     private String type;
     private String name;
-    private String birthaday;
+    private String birthday;
 
     @Override
     public String toString() {
         return "YoungestAndEldest{" +
                 "type='" + type + '\'' +
                 ", name='" + name + '\'' +
-                ", birthaday='" + birthaday + '\'' +
+                ", birthaday='" + birthday + '\'' +
                 '}';
     }
 }
