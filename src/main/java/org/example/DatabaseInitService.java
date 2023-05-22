@@ -12,9 +12,12 @@ public class DatabaseInitService {
         // Зчитуємо файл sql/init_db.sql
         String sqlFile = "./src/main/java/sql/init_db.sql";
         String sqlContent = readSqlFile(sqlFile);
-
+        String url="jdbc:postgresql://localhost:32768/modul1";
+        String login="postgres";
+        String password="1111";
+        Database database =new Database(url,login,password);
         // Отримуємо з'єднання з БД
-        Connection conn = Database.getINSTANCE().getConnection();
+        Connection conn = database.getINSTANCE().getConnection();
 
         // Виконуємо запити з файлу sql/init_db.sql
         executeSqlQueries(conn, sqlContent);

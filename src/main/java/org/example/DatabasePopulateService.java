@@ -14,7 +14,7 @@ public class DatabasePopulateService {
         String sqlContent = readSqlFile(sqlFile);
 
         // Отримуємо з'єднання з БД
-        Connection conn = Database.getINSTANCE().getConnection();
+        Connection conn = new Database("jdbc:postgresql://localhost:32768/modul1","postgres","1111").getINSTANCE().getConnection();
 
         // Виконуємо запити з файлу sql/init_db.sql
         executeSqlQueries(conn, sqlContent);
